@@ -33,31 +33,21 @@
 </script>
 <style>
 :root{
-  --paper:#faf7f0; --surface:#fffdf8; --surface-2:#f3ede1; --ink:#1c1a17; --ink-soft:#3a352d;
-  --muted:#6b6357; --line:#e7decb; --line-soft:#efe8da;
-  --accent:#b4441e; --accent-2:#d98a2b; --accent-3:#9a4dd0; --accent-4:#2bb39a;
-  --glass:rgba(255,253,248,.62); --glass-brd:rgba(28,26,23,.08);
-  --shadow:0 1px 2px rgba(28,26,23,.04),0 8px 30px rgba(28,26,23,.06);
-  --grad: linear-gradient(
-  100deg,
-  #F3AACD 0%,
-  #DFD5F7 48%,
-  #A9DDF5 100%
-);
+  --paper:#fff9fc; --surface:#ffffff; --surface-2:#f9eff8; --ink:#242136; --ink-soft:#3d394c;
+  --muted:#71687d; --line:#eeddeb; --line-soft:#f4eaf1;
+  --accent:#a64c80; --accent-2:#b7ddf7; --accent-3:#f4b8d9; --accent-4:#86bedd;
+  --glass:rgba(255,255,255,.70); --glass-brd:rgba(99,83,119,.12);
+  --shadow:0 1px 2px rgba(81,62,104,.05),0 8px 30px rgba(81,62,104,.08);
+  --grad:linear-gradient(100deg,#f3aacd 0%,#dfd5f7 48%,#a9ddf5 100%);
   --maxw:1180px; --r:16px;
 }
 [data-theme="dark"]{
-  --paper:#15120e; --surface:#1e1a14; --surface-2:#241f17; --ink:#efe8da; --ink-soft:#d9d1c1;
-  --muted:#a99f8c; --line:#332c22; --line-soft:#2a241c;
-  --accent:#f08a5d; --accent-2:#f0b35a; --accent-3:#b98cf0; --accent-4:#4fd1b5;
-  --glass:rgba(30,26,20,.55); --glass-brd:rgba(239,232,218,.10);
+  --paper:#171827; --surface:#202238; --surface-2:#282941; --ink:#f7f2fa; --ink-soft:#e6ddec;
+  --muted:#b8b2c8; --line:#3d3b57; --line-soft:#323247;
+  --accent:#f1a6cf; --accent-2:#9fcff0; --accent-3:#cbb8f6; --accent-4:#83bbdc;
+  --glass:rgba(27,29,45,.72); --glass-brd:rgba(240,233,255,.12);
   --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 40px rgba(0,0,0,.4);
-  --grad: linear-gradient(
-  100deg,
-  #F3AACD 0%,
-  #DFD5F7 48%,
-  #A9DDF5 100%
-);
+  --grad:linear-gradient(100deg,#d987b6 0%,#bda9e9 48%,#86bbdd 100%);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -278,9 +268,9 @@ footer{border-top:1px solid var(--line-soft);padding:54px 0 40px}
 
 /* === 2026 enhancement pack === */
 body::before{content:"";position:fixed;inset:0;background:
-radial-gradient(circle at 20% 20%,rgba(59,130,246,.10),transparent 30%),
-radial-gradient(circle at 80% 30%,rgba(139,92,246,.10),transparent 30%),
-radial-gradient(circle at 50% 80%,rgba(16,185,129,.08),transparent 35%);
+radial-gradient(circle at 20% 20%,rgba(247,180,213,.14),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(170,209,245,.17),transparent 30%),
+radial-gradient(circle at 50% 80%,rgba(210,188,244,.12),transparent 35%);
 pointer-events:none;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(circle at center,black,transparent 80%)}
 .research-card-modern,.icard{cursor:pointer}
@@ -288,6 +278,14 @@ pointer-events:none;z-index:-2}
 .pub{position:relative}
 .pub::before{content:"CITED";position:absolute;top:12px;right:12px;background:var(--grad);color:#fff;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.08em}
 .chip:hover{box-shadow:0 0 30px rgba(99,102,241,.25)}
+
+/* Light-mode text on pastel gradients: readable dark text */
+:root:not([data-theme="dark"]) .logo,
+:root:not([data-theme="dark"]) .btn-accent,
+:root:not([data-theme="dark"]) .filters button[aria-pressed="true"],
+:root:not([data-theme="dark"]) .icard:hover .ic,
+:root:not([data-theme="dark"]) .pub::before,
+:root:not([data-theme="dark"]) .ccard .ic { color:#303247; }
 
 </style>
 </head>
